@@ -1,0 +1,91 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-black text-white font-futura;
+  }
+
+  h1 {
+    @apply text-display font-bold tracking-tight;
+  }
+
+  h2 {
+    @apply text-headline font-bold tracking-tight;
+  }
+
+  h3 {
+    @apply text-subheadline font-bold;
+  }
+
+  p {
+    @apply text-body leading-relaxed;
+  }
+}
+
+@layer components {
+  .section-container {
+    @apply w-full px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto;
+  }
+
+  .section-padding {
+    @apply py-16 sm:py-20 lg:py-28;
+  }
+
+  .gradient-overlay {
+    @apply absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-black opacity-60;
+  }
+
+  .brand-button {
+    @apply inline-flex items-center justify-center px-8 py-3 rounded-lg font-bold transition-all duration-300 ease-out;
+  }
+
+  .brand-button-primary {
+    @apply brand-button bg-brand-red text-white hover:bg-red-700 hover:shadow-lg hover:shadow-red-500/50;
+  }
+
+  .brand-button-secondary {
+    @apply brand-button bg-transparent border-2 border-brand-red text-brand-red hover:bg-brand-red hover:text-white;
+  }
+
+  .brand-button-white {
+    @apply brand-button bg-white text-brand-red hover:bg-gray-100 font-bold;
+  }
+
+  .cinematic-overlay {
+    @apply absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent;
+  }
+
+  .smoke-effect {
+    @apply absolute inset-0 opacity-20 pointer-events-none;
+    background: radial-gradient(ellipse at center, rgba(226, 35, 36, 0.1) 0%, transparent 70%);
+    animation: smoke 8s ease-in-out infinite;
+  }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInScale {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
