@@ -13,9 +13,9 @@ const Recipes = () => {
     : RECIPES;
 
   return (
-    <div className="bg-black min-h-screen pt-24 pb-12">
+    <div className="bg-white min-h-screen pt-24 pb-12">
       {/* Hero */}
-      <section className="section-padding bg-gradient-to-b from-brand-red/10 to-transparent">
+      <section className="section-padding bg-gradient-to-b from-warm-amber/20 to-transparent">
         <div className="section-container">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -23,10 +23,10 @@ const Recipes = () => {
             transition={{ duration: 0.8 }}
             className="text-center"
           >
-            <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
+            <h1 className="text-5xl md:text-6xl font-bold text-warm-brown mb-6">
               Recetas y <span className="text-brand-red">Guías</span>
             </h1>
-            <p className="text-xl text-white/70 max-w-3xl mx-auto">
+            <p className="text-xl text-warm-brown/70 max-w-3xl mx-auto">
               Aprende técnicas, secretos de cocina y recetas autênticas con nuestros mejores cortes.
             </p>
           </motion.div>
@@ -47,8 +47,8 @@ const Recipes = () => {
               onClick={() => setSelectedCategory(null)}
               className={`px-6 py-2 rounded-lg font-bold transition-all ${
                 selectedCategory === null
-                  ? 'bg-brand-yellow text-black'
-                  : 'bg-gray-800 text-white hover:bg-gray-700'
+                  ? 'bg-warm-amber text-warm-brown'
+                  : 'bg-white text-warm-brown border border-warm-amber/30 hover:border-brand-red/40'
               }`}
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
@@ -63,7 +63,7 @@ const Recipes = () => {
                 className={`px-6 py-2 rounded-lg font-bold transition-all ${
                   selectedCategory === category
                     ? 'bg-brand-red text-white'
-                    : 'bg-gray-800 text-white hover:bg-gray-700'
+                    : 'bg-white text-warm-brown border border-warm-amber/30 hover:border-brand-red/40'
                 }`}
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
@@ -96,7 +96,7 @@ const Recipes = () => {
       </section>
 
       {/* SEO Content */}
-      <section className="section-padding bg-gray-900/50">
+      <section className="section-padding bg-warm-cream/50">
         <div className="section-container">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -105,11 +105,11 @@ const Recipes = () => {
             viewport={{ once: true }}
             className="max-w-3xl mx-auto"
           >
-            <h2 className="text-3xl font-bold text-white mb-6">
+            <h2 className="text-3xl font-bold text-warm-brown mb-6">
               <span className="text-brand-red">Cocina</span> Premium con Nuestras Carnes
             </h2>
 
-            <div className="space-y-4 text-white/70 leading-relaxed">
+            <div className="space-y-4 text-warm-brown/70 leading-relaxed">
               <p>
                 En Market Cerdo & Market Res, creemos que la carne de calidad superior merece técnicas de cocina excepcionales. Nuestros artículos te enseñan cómo sacar el máximo provecho de cada corte, desde los más magros hasta los premium con hueso.
               </p>
@@ -118,9 +118,9 @@ const Recipes = () => {
                 Descubre secretos de cocineros profesionales, recetas tradicionales antioqueñas, técnicas de parrilla colombiana y consejos de conservación para mantener tu carne fresca. Todo lo que necesitas saber está aquí.
               </p>
 
-              <h3 className="text-xl font-bold text-white mt-6">Temas que Cubrimos:</h3>
+              <h3 className="text-xl font-bold text-warm-brown mt-6">Temas que Cubrimos:</h3>
 
-              <ul className="list-disc list-inside space-y-2 text-white/60">
+              <ul className="list-disc list-inside space-y-2 text-warm-brown/60">
                 <li>Cómo identificar carne de calidad premium</li>
                 <li>Técnicas de desposte y porcionado</li>
                 <li>Parrilla colombiana: paso a paso</li>

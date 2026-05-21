@@ -41,18 +41,18 @@ const ProductCard: React.FC<ProductCardProps> = ({
     <motion.div
       whileHover={{ y: -8 }}
       transition={{ duration: 0.3 }}
-      className="bg-gray-900 rounded-lg overflow-hidden border border-brand-red/10 hover:border-brand-red/40 transition-colors"
+      className="bg-white rounded-lg overflow-hidden border border-warm-amber/30 hover:border-brand-red/60 transition-colors warm-shadow hover:warm-shadow-md"
     >
       {/* Image Container */}
-      <div className="relative h-48 overflow-hidden bg-black">
+      <div className="relative h-64 overflow-hidden bg-warm-cream">
         <motion.img
           src={image}
           alt={name}
           className="w-full h-full object-cover"
-          whileHover={{ scale: 1.1 }}
+          whileHover={{ scale: 1.05 }}
           transition={{ duration: 0.4 }}
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-60" />
+        <div className="absolute inset-0 bg-gradient-to-t from-warm-brown/20 via-transparent to-transparent opacity-40" />
 
         {/* Category Badge */}
         <div className="absolute top-3 right-3 flex flex-col gap-2">
@@ -63,12 +63,12 @@ const ProductCard: React.FC<ProductCardProps> = ({
       </div>
 
       {/* Content */}
-      <div className="p-5 flex flex-col h-full">
-        <h3 className="text-lg font-bold text-white mb-2 line-clamp-2">{name}</h3>
+      <div className="p-6 flex flex-col h-full">
+        <h3 className="text-lg font-bold text-warm-brown mb-2 line-clamp-2">{name}</h3>
 
-        <p className="text-sm text-white/60 mb-3 line-clamp-2">{description}</p>
+        <p className="text-sm text-warm-brown/70 mb-3 line-clamp-2">{description}</p>
 
-        <p className="text-xs text-brand-yellow font-semibold mb-4">Ideal para: {idealFor}</p>
+        <p className="text-xs text-brand-red font-semibold mb-4">Ideal para: <span className="text-warm-deepred">{idealFor}</span></p>
 
         {/* Action Buttons */}
         <div className="flex gap-2 pt-3 mt-auto">

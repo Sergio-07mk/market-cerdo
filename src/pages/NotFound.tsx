@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 const NotFound = () => {
   return (
-    <div className="bg-black min-h-screen flex items-center justify-center pt-24 pb-12">
+    <div className="bg-white min-h-screen flex items-center justify-center pt-24 pb-12">
       <div className="section-container text-center">
         <motion.div
           initial={{ opacity: 0, scale: 0.9 }}
@@ -11,8 +11,8 @@ const NotFound = () => {
           transition={{ duration: 0.6 }}
         >
           <h1 className="text-9xl font-bold text-brand-red mb-4">404</h1>
-          <h2 className="text-4xl font-bold text-white mb-4">Página No Encontrada</h2>
-          <p className="text-xl text-white/60 mb-8 max-w-2xl mx-auto">
+          <h2 className="text-4xl font-bold text-warm-brown mb-4">Página No Encontrada</h2>
+          <p className="text-xl text-warm-brown/60 mb-8 max-w-2xl mx-auto">
             Lo sentimos, la página que buscas no existe. Pero no te preocupes, estamos aquí para ayudarte.
           </p>
 

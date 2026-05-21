@@ -59,9 +59,9 @@ const Promotions = () => {
   ];
 
   return (
-    <div className="bg-black min-h-screen pt-24 pb-12">
+    <div className="bg-white min-h-screen pt-24 pb-12">
       {/* Hero */}
-      <section className="section-padding bg-gradient-to-b from-brand-red/10 to-transparent">
+      <section className="section-padding bg-gradient-to-b from-warm-amber/20 to-transparent">
         <div className="section-container">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -69,10 +69,10 @@ const Promotions = () => {
             transition={{ duration: 0.8 }}
             className="text-center"
           >
-            <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
+            <h1 className="text-5xl md:text-6xl font-bold text-warm-brown mb-6">
               <span className="text-brand-red">Combos</span> y Promociones
             </h1>
-            <p className="text-xl text-white/70 max-w-3xl mx-auto">
+            <p className="text-xl text-warm-brown/70 max-w-3xl mx-auto">
               Descubre nuestros combos especiales diseñados para cada ocasión y cliente.
             </p>
           </motion.div>
@@ -92,32 +92,32 @@ const Promotions = () => {
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ delay: index * 0.1 }}
                   viewport={{ once: true }}
-                  className={`bg-gradient-to-br ${combo.color} rounded-lg border border-brand-red/20 hover:border-brand-red/50 transition-all p-8`}
+                  className={`bg-white rounded-lg border-2 border-warm-amber/40 hover:border-brand-red/60 transition-all p-8 warm-shadow`}
                 >
                   <div className="flex items-start justify-between mb-6">
                     <div>
-                      <h3 className="text-2xl font-bold text-white mb-2">{combo.title}</h3>
-                      <p className="text-white/60">{combo.description}</p>
+                      <h3 className="text-2xl font-bold text-warm-brown mb-2">{combo.title}</h3>
+                      <p className="text-warm-brown/70">{combo.description}</p>
                     </div>
                     <div className="w-12 h-12 rounded-lg bg-brand-red/20 flex items-center justify-center flex-shrink-0">
                       <Icon size={24} className="text-brand-red" />
                     </div>
                   </div>
 
-                  <div className="bg-black/30 rounded-lg p-6 mb-6">
-                    <p className="text-sm text-white/60 font-semibold mb-3">Incluye:</p>
+                  <div className="bg-warm-cream/50 rounded-lg p-6 mb-6">
+                    <p className="text-sm text-warm-brown/70 font-semibold mb-3">Incluye:</p>
                     <ul className="space-y-2">
                       {combo.items.map((item, i) => (
-                        <li key={i} className="flex items-center gap-3 text-white/80">
-                          <span className="w-2 h-2 rounded-full bg-brand-yellow" />
+                        <li key={i} className="flex items-center gap-3 text-warm-brown/80">
+                          <span className="w-2 h-2 rounded-full bg-warm-amber" />
                           {item}
                         </li>
                       ))}
                     </ul>
                   </div>
 
-                  <div className="flex items-center justify-between pt-6 border-t border-white/10">
-                    <span className="text-white/60 text-sm">Desde</span>
+                  <div className="flex items-center justify-between pt-6 border-t border-warm-amber/20">
+                    <span className="text-warm-brown/70 text-sm">Desde</span>
                     <div className="flex gap-3">
                       <a
                         href={BRAND_INFO.social.whatsapp}
@@ -138,7 +138,7 @@ const Promotions = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="section-padding bg-gray-900/50">
+      <section className="section-padding bg-warm-cream/50">
         <div className="section-container text-center">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -146,10 +146,10 @@ const Promotions = () => {
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
           >
-            <h2 className="text-3xl font-bold text-white mb-4">
+            <h2 className="text-3xl font-bold text-warm-brown mb-4">
               ¿Tu Combo No Está Aquí?
             </h2>
-            <p className="text-white/60 mb-8 max-w-2xl mx-auto">
+            <p className="text-warm-brown/70 mb-8 max-w-2xl mx-auto">
               Ofrecemos combos totalmente personalizados. Contacta con nosotros por WhatsApp para diseñar el combo perfecto para tu negocio o evento.
             </p>
             <a

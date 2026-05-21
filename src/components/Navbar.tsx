@@ -37,8 +37,8 @@ const Navbar = () => {
     <motion.nav
       className={`fixed top-0 w-full z-50 transition-all duration-300 ${
         isScrolled
-          ? 'bg-black/95 backdrop-blur-md border-b border-brand-red/20'
-          : 'bg-transparent'
+          ? 'bg-white/95 backdrop-blur-md border-b border-warm-amber/40'
+          : 'bg-white/80 backdrop-blur-sm'
       }`}
       initial={{ y: -100 }}
       animate={{ y: 0 }}
@@ -64,7 +64,7 @@ const Navbar = () => {
                 className={`text-sm font-bold transition-colors duration-300 ${
                   isActive(link.href)
                     ? 'text-brand-red'
-                    : 'text-white hover:text-brand-red'
+                    : 'text-warm-brown hover:text-brand-red'
                 }`}
               >
                 {link.label}
@@ -75,7 +75,7 @@ const Navbar = () => {
           {/* Mobile Menu Button */}
           <button
             onClick={() => setIsOpen(!isOpen)}
-            className="lg:hidden text-white hover:text-brand-red transition-colors"
+            className="lg:hidden text-warm-brown hover:text-brand-red transition-colors"
           >
             {isOpen ? <X size={24} /> : <Menu size={24} />}
           </button>
@@ -89,7 +89,7 @@ const Navbar = () => {
             height: isOpen ? 'auto' : 0,
           }}
           transition={{ duration: 0.3 }}
-          className="lg:hidden overflow-hidden bg-black/95"
+          className="lg:hidden overflow-hidden bg-white/95"
         >
           <div className="flex flex-col gap-4 p-6">
             {navLinks.map((link) => (
@@ -99,7 +99,7 @@ const Navbar = () => {
                 className={`text-sm font-bold transition-colors duration-300 ${
                   isActive(link.href)
                     ? 'text-brand-red'
-                    : 'text-white hover:text-brand-red'
+                    : 'text-warm-brown hover:text-brand-red'
                 }`}
               >
                 {link.label}

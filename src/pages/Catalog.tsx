@@ -27,7 +27,7 @@ const Catalog = () => {
   const categories = Array.from(new Set(allProducts.map((p) => p.category)));
 
   return (
-    <div className="bg-black min-h-screen pt-24 pb-12">
+    <div className="bg-white min-h-screen pt-24 pb-12">
       <div className="section-container">
         {/* Header */}
         <motion.div
@@ -47,7 +47,7 @@ const Catalog = () => {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.1 }}
-          className="bg-gray-900 p-6 rounded-lg border border-brand-red/20 mb-12"
+          className="bg-warm-cream p-6 rounded-lg border border-warm-amber/40 mb-12 warm-shadow"
         >
           {/* Tabs */}
           <div className="flex gap-4 mb-6 flex-wrap">
@@ -61,7 +61,7 @@ const Catalog = () => {
                 className={`px-6 py-2 rounded-lg font-bold transition-all ${
                   activeTab === tab
                     ? 'bg-brand-red text-white shadow-lg shadow-brand-red/30'
-                    : 'bg-gray-800 text-white hover:bg-gray-700'
+                    : 'bg-white text-warm-brown border border-warm-amber/30 hover:border-brand-red/40'
                 }`}
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
@@ -79,7 +79,7 @@ const Catalog = () => {
               placeholder="Buscar productos..."
               value={searchTerm}
               onChange={(e) => setSearchTerm(e.target.value)}
-              className="w-full pl-12 pr-4 py-3 bg-black border border-brand-red/20 rounded-lg text-white placeholder:text-white/40 focus:outline-none focus:border-brand-red transition-colors"
+              className="w-full pl-12 pr-4 py-3 bg-white border border-warm-amber/40 rounded-lg text-warm-brown placeholder:text-warm-brown/40 focus:outline-none focus:border-brand-red transition-colors"
             />
           </div>
 
@@ -89,8 +89,8 @@ const Catalog = () => {
               onClick={() => setCategoryFilter(null)}
               className={`px-4 py-2 rounded-lg text-sm font-semibold transition-all ${
                 categoryFilter === null
-                  ? 'bg-brand-yellow text-black'
-                  : 'bg-gray-800 text-white hover:bg-gray-700'
+                  ? 'bg-warm-amber text-warm-brown'
+                  : 'bg-white text-warm-brown border border-warm-amber/30 hover:border-brand-red/40'
               }`}
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
@@ -105,7 +105,7 @@ const Catalog = () => {
                 className={`px-4 py-2 rounded-lg text-sm font-semibold transition-all ${
                   categoryFilter === category
                     ? 'bg-brand-red text-white'
-                    : 'bg-gray-800 text-white hover:bg-gray-700'
+                    : 'bg-white text-warm-brown border border-warm-amber/30 hover:border-brand-red/40'
                 }`}
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
@@ -121,7 +121,7 @@ const Catalog = () => {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 0.2 }}
-          className="text-white/60 mb-6"
+          className="text-warm-brown/70 mb-6"
         >
           Mostrando <span className="text-brand-red font-bold">{filteredProducts.length}</span> de {allProducts.length} productos
         </motion.p>
@@ -146,7 +146,7 @@ const Catalog = () => {
             animate={{ opacity: 1 }}
             className="text-center py-16"
           >
-            <p className="text-white/60 text-lg mb-4">No se encontraron productos</p>
+            <p className="text-warm-brown/70 text-lg mb-4">No se encontraron productos</p>
             <button
               onClick={() => {
                 setSearchTerm('');

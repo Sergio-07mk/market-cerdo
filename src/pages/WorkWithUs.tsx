@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Upload } from 'lucide-react';
 import SectionTitle from '../components/SectionTitle';
@@ -77,9 +77,9 @@ const WorkWithUs = () => {
   ];
 
   return (
-    <div className="bg-black min-h-screen pt-24 pb-12">
+    <div className="bg-white min-h-screen pt-24 pb-12">
       {/* Hero */}
-      <section className="section-padding bg-gradient-to-b from-brand-red/10 to-transparent">
+      <section className="section-padding bg-gradient-to-b from-warm-amber/20 to-transparent">
         <div className="section-container">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -87,10 +87,10 @@ const WorkWithUs = () => {
             transition={{ duration: 0.8 }}
             className="text-center"
           >
-            <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
+            <h1 className="text-5xl md:text-6xl font-bold text-warm-brown mb-6">
               Trabaja <span className="text-brand-red">Con Nosotros</span>
             </h1>
-            <p className="text-xl text-white/70 max-w-3xl mx-auto">
+            <p className="text-xl text-warm-brown/70 max-w-3xl mx-auto">
               Únete a un equipo apasionado por la excelencia, la calidad y el compromiso con nuestras comunidades.
             </p>
           </motion.div>
@@ -98,7 +98,7 @@ const WorkWithUs = () => {
       </section>
 
       {/* Why Join Us */}
-      <section className="section-padding bg-gray-900/50">
+      <section className="section-padding bg-warm-cream/50">
         <div className="section-container">
           <SectionTitle title="Por Qué Unirse a Market Cerdo & Market Res" />
 
@@ -127,10 +127,10 @@ const WorkWithUs = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ delay: i * 0.1 }}
                 viewport={{ once: true }}
-                className="bg-black rounded-lg p-6 border border-brand-red/20 hover:border-brand-red/40 transition-colors"
+                className="bg-white rounded-lg p-6 border border-warm-amber/40 hover:border-brand-red/60 transition-colors warm-shadow"
               >
-                <h3 className="text-lg font-bold text-white mb-2">{reason.title}</h3>
-                <p className="text-white/60">{reason.description}</p>
+                <h3 className="text-lg font-bold text-warm-brown mb-2">{reason.title}</h3>
+                <p className="text-warm-brown/60">{reason.description}</p>
               </motion.div>
             ))}
           </div>
@@ -150,14 +150,14 @@ const WorkWithUs = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ delay: i * 0.1 }}
                 viewport={{ once: true }}
-                className="bg-gray-900 rounded-lg p-6 border border-brand-red/20 hover:border-brand-red/40 transition-colors"
+                className="bg-white rounded-lg p-6 border border-warm-amber/40 hover:border-brand-red/60 transition-colors warm-shadow"
               >
-                <h3 className="text-xl font-bold text-white mb-2">{position.title}</h3>
-                <p className="text-brand-yellow text-sm font-semibold mb-3">{position.location}</p>
-                <p className="text-white/60 mb-4">{position.description}</p>
+                <h3 className="text-xl font-bold text-warm-brown mb-2">{position.title}</h3>
+                <p className="text-warm-amber text-sm font-semibold mb-3">{position.location}</p>
+                <p className="text-warm-brown/60 mb-4">{position.description}</p>
                 <button
                   onClick={() => document.getElementById('application-form')?.scrollIntoView({ behavior: 'smooth' })}
-                  className="text-brand-red hover:text-brand-yellow transition-colors font-semibold text-sm"
+                  className="text-brand-red hover:text-warm-deepred transition-colors font-semibold text-sm"
                 >
                   Aplicar →
                 </button>
@@ -168,7 +168,7 @@ const WorkWithUs = () => {
       </section>
 
       {/* Application Form */}
-      <section id="application-form" className="section-padding bg-gray-900/50">
+      <section id="application-form" className="section-padding bg-warm-cream/50">
         <div className="section-container max-w-2xl">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -176,20 +176,20 @@ const WorkWithUs = () => {
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
           >
-            <h2 className="text-3xl font-bold text-white mb-2 text-center">
+            <h2 className="text-3xl font-bold text-warm-brown mb-2 text-center">
               Envía Tu <span className="text-brand-red">Aplicación</span>
             </h2>
-            <p className="text-white/60 text-center mb-8">
+            <p className="text-warm-brown/60 text-center mb-8">
               Completa el formulario y adjunta tu hoja de vida. Nos pondremos en contacto pronto.
             </p>
 
-            <form onSubmit={handleSubmit} className="bg-black rounded-lg p-8 border border-brand-red/20">
+            <form onSubmit={handleSubmit} className="bg-white rounded-lg p-8 border border-warm-amber/40 warm-shadow">
               {submitted && (
                 <motion.div
                   initial={{ opacity: 0, y: -10 }}
                   animate={{ opacity: 1, y: 0 }}
                   exit={{ opacity: 0 }}
-                  className="bg-green-500/20 border border-green-500 text-green-300 rounded-lg p-4 mb-6"
+                  className="bg-green-50 border border-green-300 text-green-800 rounded-lg p-4 mb-6"
                 >
                   Aplicación enviada exitosamente. Nos pondremos en contacto pronto.
                 </motion.div>
@@ -198,55 +198,55 @@ const WorkWithUs = () => {
               <div className="space-y-4">
                 {/* Name */}
                 <div>
-                  <label className="block text-white font-semibold mb-2">Nombre Completo</label>
+                  <label className="block text-warm-brown font-semibold mb-2">Nombre Completo</label>
                   <input
                     type="text"
                     name="nombre"
                     value={formData.nombre}
                     onChange={handleChange}
                     required
-                    className="w-full px-4 py-3 bg-gray-900 border border-brand-red/20 rounded-lg text-white placeholder:text-white/40 focus:outline-none focus:border-brand-red transition-colors"
+                    className="w-full px-4 py-3 bg-warm-cream border border-warm-amber/40 rounded-lg text-warm-brown placeholder:text-warm-brown/40 focus:outline-none focus:border-brand-red transition-colors"
                     placeholder="Tu nombre"
                   />
                 </div>
 
                 {/* Email */}
                 <div>
-                  <label className="block text-white font-semibold mb-2">Email</label>
+                  <label className="block text-warm-brown font-semibold mb-2">Email</label>
                   <input
                     type="email"
                     name="email"
                     value={formData.email}
                     onChange={handleChange}
                     required
-                    className="w-full px-4 py-3 bg-gray-900 border border-brand-red/20 rounded-lg text-white placeholder:text-white/40 focus:outline-none focus:border-brand-red transition-colors"
+                    className="w-full px-4 py-3 bg-warm-cream border border-warm-amber/40 rounded-lg text-warm-brown placeholder:text-warm-brown/40 focus:outline-none focus:border-brand-red transition-colors"
                     placeholder="tu@email.com"
                   />
                 </div>
 
                 {/* Phone */}
                 <div>
-                  <label className="block text-white font-semibold mb-2">Teléfono</label>
+                  <label className="block text-warm-brown font-semibold mb-2">Teléfono</label>
                   <input
                     type="tel"
                     name="telefono"
                     value={formData.telefono}
                     onChange={handleChange}
                     required
-                    className="w-full px-4 py-3 bg-gray-900 border border-brand-red/20 rounded-lg text-white placeholder:text-white/40 focus:outline-none focus:border-brand-red transition-colors"
+                    className="w-full px-4 py-3 bg-warm-cream border border-warm-amber/40 rounded-lg text-warm-brown placeholder:text-warm-brown/40 focus:outline-none focus:border-brand-red transition-colors"
                     placeholder="+57 ..."
                   />
                 </div>
 
                 {/* Position */}
                 <div>
-                  <label className="block text-white font-semibold mb-2">Posición Solicitada</label>
+                  <label className="block text-warm-brown font-semibold mb-2">Posición Solicitada</label>
                   <select
                     name="cargo"
                     value={formData.cargo}
                     onChange={handleChange}
                     required
-                    className="w-full px-4 py-3 bg-gray-900 border border-brand-red/20 rounded-lg text-white focus:outline-none focus:border-brand-red transition-colors"
+                    className="w-full px-4 py-3 bg-warm-cream border border-warm-amber/40 rounded-lg text-warm-brown focus:outline-none focus:border-brand-red transition-colors"
                   >
                     <option value="">Selecciona una posición</option>
                     {positions.map((pos) => (
@@ -259,10 +259,10 @@ const WorkWithUs = () => {
 
                 {/* File Upload */}
                 <div>
-                  <label className="block text-white font-semibold mb-2">Hoja de Vida (PDF, DOC)</label>
-                  <label className="flex items-center justify-center gap-2 px-4 py-6 border-2 border-dashed border-brand-red/40 rounded-lg cursor-pointer hover:border-brand-red/60 transition-colors">
+                  <label className="block text-warm-brown font-semibold mb-2">Hoja de Vida (PDF, DOC)</label>
+                  <label className="flex items-center justify-center gap-2 px-4 py-6 border-2 border-dashed border-warm-amber/60 rounded-lg cursor-pointer hover:border-brand-red/60 transition-colors">
                     <Upload size={20} className="text-brand-red" />
-                    <span className="text-white/60">
+                    <span className="text-warm-brown/60">
                       {file ? file.name : 'Arrastra o click para subir'}
                     </span>
                     <input

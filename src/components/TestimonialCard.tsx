@@ -17,24 +17,24 @@ const TestimonialCard: React.FC<TestimonialCardProps> = ({ name, type, text, ima
       whileInView={{ opacity: 1, x: 0 }}
       transition={{ duration: 0.5, delay }}
       viewport={{ once: true }}
-      className="bg-gray-900 rounded-lg p-6 border border-brand-red/10 hover:border-brand-red/40 transition-colors"
+      className="bg-white rounded-lg p-6 border border-warm-amber/40 hover:border-brand-red/60 transition-colors warm-shadow hover:warm-shadow-md"
     >
       {/* Stars */}
       <div className="flex gap-1 mb-4">
         {[...Array(5)].map((_, i) => (
-          <Star key={i} size={16} className="fill-brand-yellow text-brand-yellow" />
+          <Star key={i} size={16} className="fill-warm-amber text-warm-amber" />
         ))}
       </div>
 
       {/* Quote */}
-      <p className="text-white/80 italic mb-6 line-clamp-4">&quot;{text}&quot;</p>
+      <p className="text-warm-brown/80 italic mb-6 line-clamp-4">&quot;{text}&quot;</p>
 
       {/* Author */}
       <div className="flex items-center gap-4">
-        <img src={image} alt={name} className="w-12 h-12 rounded-full object-cover border border-brand-red/20" />
+        <img src={image} alt={name} className="w-12 h-12 rounded-full object-cover border border-warm-amber/30" />
         <div>
-          <p className="text-white font-bold text-sm">{name}</p>
-          <p className="text-brand-yellow text-xs font-semibold">{type}</p>
+          <p className="text-warm-brown font-bold text-sm">{name}</p>
+          <p className="text-brand-red text-xs font-semibold">{type}</p>
         </div>
       </div>
     </motion.div>

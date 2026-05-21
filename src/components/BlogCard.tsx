@@ -25,10 +25,10 @@ const BlogCard: React.FC<BlogCardProps> = ({
       whileHover={{ y: -4 }}
       transition={{ duration: 0.3 }}
       onClick={onClick}
-      className="group cursor-pointer rounded-lg overflow-hidden bg-gray-900 border border-brand-red/10 hover:border-brand-red/40 transition-colors"
+      className="group cursor-pointer rounded-lg overflow-hidden bg-white border border-warm-amber/30 hover:border-brand-red/60 transition-colors warm-shadow hover:warm-shadow-md"
     >
       {/* Image */}
-      <div className="relative h-56 overflow-hidden bg-black">
+      <div className="relative h-56 overflow-hidden bg-warm-cream">
         <motion.img
           src={image}
           alt={title}
@@ -36,7 +36,7 @@ const BlogCard: React.FC<BlogCardProps> = ({
           whileHover={{ scale: 1.05 }}
           transition={{ duration: 0.4 }}
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-transparent to-black opacity-50" />
+        <div className="absolute inset-0 bg-gradient-to-b from-transparent to-warm-brown/20 opacity-30" />
 
         {/* Category Badge */}
         <div className="absolute top-3 left-3">
@@ -48,15 +48,15 @@ const BlogCard: React.FC<BlogCardProps> = ({
 
       {/* Content */}
       <div className="p-6 flex flex-col h-full">
-        <h3 className="text-lg font-bold text-white mb-2 group-hover:text-brand-red transition-colors line-clamp-2">
+        <h3 className="text-lg font-bold text-warm-brown mb-2 group-hover:text-brand-red transition-colors line-clamp-2">
           {title}
         </h3>
 
-        <p className="text-sm text-white/60 mb-4 line-clamp-3 flex-1">{excerpt}</p>
+        <p className="text-sm text-warm-brown/70 mb-4 line-clamp-3 flex-1">{excerpt}</p>
 
         {/* Footer */}
-        <div className="flex items-center justify-between pt-4 border-t border-white/10">
-          <div className="flex items-center gap-2 text-xs text-white/40">
+        <div className="flex items-center justify-between pt-4 border-t border-warm-amber/20">
+          <div className="flex items-center gap-2 text-xs text-warm-brown/50">
             <Clock size={14} />
             <span>{readTime}</span>
           </div>

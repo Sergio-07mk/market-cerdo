@@ -40,7 +40,7 @@ export const PRODUCTS_TRADITIONAL = [
     category: 'Semimagro',
     description: 'Corte versátil con algo de grasa natural. Ideal para guisos y cazuelas.',
     idealFor: 'Guisos, cazuelas, caldo',
-    image: 'https://images.unsplash.com/photo-1455619452474-d2be8b1ae15f?w=500&h=500&fit=crop',
+    image: '/bondiola.png',
   },
   {
     id: 'pierna-magra',
@@ -48,7 +48,7 @@ export const PRODUCTS_TRADITIONAL = [
     category: 'Magro',
     description: 'Corte magro de excelente presentación. Perfecto para asar.',
     idealFor: 'Asados familiares, parrilla premium',
-    image: 'https://images.unsplash.com/photo-1432139555190-58524dae6a55?w=500&h=500&fit=crop',
+    image: '/pierna.png',
   },
   {
     id: 'barriguero',
@@ -56,7 +56,7 @@ export const PRODUCTS_TRADITIONAL = [
     category: 'Con Hueso',
     description: 'Tocino de primera calidad con hueso. Clásico para chicharrón.',
     idealFor: 'Chicharrón, fritanga, parrilla',
-    image: 'https://images.unsplash.com/photo-1546069901-ba9599a7e63c?w=500&h=500&fit=crop',
+    image: '/barriguero.png',
   },
   {
     id: 'tocino-papada',
@@ -80,7 +80,7 @@ export const PRODUCTS_TRADITIONAL = [
     category: 'Magro',
     description: 'Chorizo artesanal hecho en casa. Sabor tradicional colombiano.',
     idealFor: 'Parrilla, desayuno, sándwiches',
-    image: 'https://images.unsplash.com/photo-1555939594-58d7cb561537?w=500&h=500&fit=crop',
+    image: '/chorizos_x5.jpg',
   },
   {
     id: 'costilla-hueso',
@@ -96,7 +96,7 @@ export const PRODUCTS_TRADITIONAL = [
     category: 'Con Hueso',
     description: 'Tibia con tuétano. Perfecto para cocidos y caldos.',
     idealFor: 'Caldos, cocidos, ossobuco a la milanesa',
-    image: 'https://images.unsplash.com/photo-1546069901-ba9599a7e63c?w=500&h=500&fit=crop',
+    image: '/ossobuco.png',
   },
   {
     id: 'paticas',

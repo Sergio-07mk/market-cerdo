@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Mail, Phone, MapPin, Clock, MessageCircle } from 'lucide-react';
 import { BRAND_INFO } from '../data/brand';
@@ -38,9 +38,9 @@ const Contact = () => {
   };
 
   return (
-    <div className="bg-black min-h-screen pt-24 pb-12">
+    <div className="bg-white min-h-screen pt-24 pb-12">
       {/* Hero */}
-      <section className="section-padding bg-gradient-to-b from-brand-red/10 to-transparent">
+      <section className="section-padding bg-gradient-to-b from-warm-amber/20 to-transparent">
         <div className="section-container">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -48,10 +48,10 @@ const Contact = () => {
             transition={{ duration: 0.8 }}
             className="text-center"
           >
-            <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
+            <h1 className="text-5xl md:text-6xl font-bold text-warm-brown mb-6">
               <span className="text-brand-red">Contáctanos</span>
             </h1>
-            <p className="text-xl text-white/70 max-w-3xl mx-auto">
+            <p className="text-xl text-warm-brown/70 max-w-3xl mx-auto">
               Estamos aquí para responder tus preguntas y procesar tus pedidos.
             </p>
           </motion.div>
@@ -71,14 +71,14 @@ const Contact = () => {
               className="space-y-6"
             >
               {/* Phone */}
-              <div className="bg-gray-900 rounded-lg p-6 border border-brand-red/20 hover:border-brand-red/40 transition-colors">
+              <div className="bg-white rounded-lg p-6 border border-warm-amber/40 hover:border-brand-red/60 transition-colors warm-shadow">
                 <div className="flex gap-4 items-start">
                   <Phone className="text-brand-red flex-shrink-0 mt-1" size={20} />
                   <div>
-                    <h3 className="text-white font-bold mb-2">Teléfono</h3>
+                    <h3 className="text-warm-brown font-bold mb-2">Teléfono</h3>
                     <a
                       href={`tel:${BRAND_INFO.phone}`}
-                      className="text-white/60 hover:text-brand-red transition-colors"
+                      className="text-warm-brown/60 hover:text-brand-red transition-colors"
                     >
                       {BRAND_INFO.phone}
                     </a>
@@ -87,16 +87,16 @@ const Contact = () => {
               </div>
 
               {/* WhatsApp */}
-              <div className="bg-gray-900 rounded-lg p-6 border border-brand-red/20 hover:border-brand-red/40 transition-colors">
+              <div className="bg-white rounded-lg p-6 border border-warm-amber/40 hover:border-brand-red/60 transition-colors warm-shadow">
                 <div className="flex gap-4 items-start">
                   <MessageCircle className="text-brand-red flex-shrink-0 mt-1" size={20} />
                   <div>
-                    <h3 className="text-white font-bold mb-2">WhatsApp</h3>
+                    <h3 className="text-warm-brown font-bold mb-2">WhatsApp</h3>
                     <a
                       href={BRAND_INFO.social.whatsapp}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="text-brand-red hover:text-brand-yellow transition-colors font-semibold"
+                      className="text-brand-red hover:text-warm-deepred transition-colors font-semibold"
                     >
                       Enviar mensaje
                     </a>
@@ -105,14 +105,14 @@ const Contact = () => {
               </div>
 
               {/* Email */}
-              <div className="bg-gray-900 rounded-lg p-6 border border-brand-red/20 hover:border-brand-red/40 transition-colors">
+              <div className="bg-white rounded-lg p-6 border border-warm-amber/40 hover:border-brand-red/60 transition-colors warm-shadow">
                 <div className="flex gap-4 items-start">
                   <Mail className="text-brand-red flex-shrink-0 mt-1" size={20} />
                   <div>
-                    <h3 className="text-white font-bold mb-2">Email</h3>
+                    <h3 className="text-warm-brown font-bold mb-2">Email</h3>
                     <a
                       href={`mailto:${BRAND_INFO.email}`}
-                      className="text-white/60 hover:text-brand-red transition-colors"
+                      className="text-warm-brown/60 hover:text-brand-red transition-colors"
                     >
                       {BRAND_INFO.email}
                     </a>
@@ -121,21 +121,21 @@ const Contact = () => {
               </div>
 
               {/* Locations */}
-              <div className="bg-gray-900 rounded-lg p-6 border border-brand-red/20 hover:border-brand-red/40 transition-colors">
+              <div className="bg-white rounded-lg p-6 border border-warm-amber/40 hover:border-brand-red/60 transition-colors warm-shadow">
                 <div className="flex gap-4 items-start">
                   <MapPin className="text-brand-red flex-shrink-0 mt-1" size={20} />
                   <div>
-                    <h3 className="text-white font-bold mb-3">Ubicaciones</h3>
-                    <div className="space-y-2 text-white/60 text-sm">
+                    <h3 className="text-warm-brown font-bold mb-3">Ubicaciones</h3>
+                    <div className="space-y-2 text-warm-brown/60 text-sm">
                       <p>
-                        <span className="font-semibold text-white">Bello, Antioquia</span>
+                        <span className="font-semibold text-warm-brown">Bello, Antioquia</span>
                         <br />
                         Disponible ahora
                       </p>
                       <p>
-                        <span className="font-semibold text-white">Envigado, Antioquia</span>
+                        <span className="font-semibold text-warm-brown">Envigado, Antioquia</span>
                         <br />
-                        <span className="text-brand-yellow">Próximamente</span>
+                        <span className="text-warm-amber font-semibold">Próximamente</span>
                       </p>
                     </div>
                   </div>
@@ -143,12 +143,12 @@ const Contact = () => {
               </div>
 
               {/* Hours */}
-              <div className="bg-gray-900 rounded-lg p-6 border border-brand-red/20 hover:border-brand-red/40 transition-colors">
+              <div className="bg-white rounded-lg p-6 border border-warm-amber/40 hover:border-brand-red/60 transition-colors warm-shadow">
                 <div className="flex gap-4 items-start">
                   <Clock className="text-brand-red flex-shrink-0 mt-1" size={20} />
                   <div>
-                    <h3 className="text-white font-bold mb-2">Horario</h3>
-                    <div className="space-y-1 text-white/60 text-sm">
+                    <h3 className="text-warm-brown font-bold mb-2">Horario</h3>
+                    <div className="space-y-1 text-warm-brown/60 text-sm">
                       <p>Lunes - Viernes: 7:00 AM - 6:00 PM</p>
                       <p>Sábado: 8:00 AM - 4:00 PM</p>
                       <p>Domingo: Cerrado</p>
@@ -166,15 +166,15 @@ const Contact = () => {
               viewport={{ once: true }}
               className="lg:col-span-2"
             >
-              <form onSubmit={handleSubmit} className="bg-gray-900 rounded-lg p-8 border border-brand-red/20">
-                <h3 className="text-2xl font-bold text-white mb-6">Envía tu Mensaje</h3>
+              <form onSubmit={handleSubmit} className="bg-white rounded-lg p-8 border border-warm-amber/40 warm-shadow">
+                <h3 className="text-2xl font-bold text-warm-brown mb-6">Envía tu Mensaje</h3>
 
                 {submitted && (
                   <motion.div
                     initial={{ opacity: 0, y: -10 }}
                     animate={{ opacity: 1, y: 0 }}
                     exit={{ opacity: 0 }}
-                    className="bg-green-500/20 border border-green-500 text-green-300 rounded-lg p-4 mb-6"
+                    className="bg-green-50 border border-green-300 text-green-800 rounded-lg p-4 mb-6"
                   >
                     Mensaje enviado correctamente. Nos pondremos en contacto pronto.
                   </motion.div>
@@ -183,40 +183,40 @@ const Contact = () => {
                 <div className="space-y-4">
                   {/* Name */}
                   <div>
-                    <label className="block text-white font-semibold mb-2">Nombre</label>
+                    <label className="block text-warm-brown font-semibold mb-2">Nombre</label>
                     <input
                       type="text"
                       name="nombre"
                       value={formData.nombre}
                       onChange={handleChange}
                       required
-                      className="w-full px-4 py-3 bg-black border border-brand-red/20 rounded-lg text-white placeholder:text-white/40 focus:outline-none focus:border-brand-red transition-colors"
+                      className="w-full px-4 py-3 bg-warm-cream border border-warm-amber/40 rounded-lg text-warm-brown placeholder:text-warm-brown/40 focus:outline-none focus:border-brand-red transition-colors"
                       placeholder="Tu nombre"
                     />
                   </div>
 
                   {/* Phone */}
                   <div>
-                    <label className="block text-white font-semibold mb-2">Teléfono</label>
+                    <label className="block text-warm-brown font-semibold mb-2">Teléfono</label>
                     <input
                       type="tel"
                       name="telefono"
                       value={formData.telefono}
                       onChange={handleChange}
                       required
-                      className="w-full px-4 py-3 bg-black border border-brand-red/20 rounded-lg text-white placeholder:text-white/40 focus:outline-none focus:border-brand-red transition-colors"
+                      className="w-full px-4 py-3 bg-warm-cream border border-warm-amber/40 rounded-lg text-warm-brown placeholder:text-warm-brown/40 focus:outline-none focus:border-brand-red transition-colors"
                       placeholder="+57 ..."
                     />
                   </div>
 
                   {/* Client Type */}
                   <div>
-                    <label className="block text-white font-semibold mb-2">Tipo de Cliente</label>
+                    <label className="block text-warm-brown font-semibold mb-2">Tipo de Cliente</label>
                     <select
                       name="clientType"
                       value={formData.clientType}
                       onChange={handleChange}
-                      className="w-full px-4 py-3 bg-black border border-brand-red/20 rounded-lg text-white focus:outline-none focus:border-brand-red transition-colors"
+                      className="w-full px-4 py-3 bg-warm-cream border border-warm-amber/40 rounded-lg text-warm-brown focus:outline-none focus:border-brand-red transition-colors"
                     >
                       <option value="hogar">Hogar</option>
                       <option value="restaurante">Restaurante</option>
@@ -227,14 +227,14 @@ const Contact = () => {
 
                   {/* Message */}
                   <div>
-                    <label className="block text-white font-semibold mb-2">Mensaje</label>
+                    <label className="block text-warm-brown font-semibold mb-2">Mensaje</label>
                     <textarea
                       name="mensaje"
                       value={formData.mensaje}
                       onChange={handleChange}
                       required
                       rows={4}
-                      className="w-full px-4 py-3 bg-black border border-brand-red/20 rounded-lg text-white placeholder:text-white/40 focus:outline-none focus:border-brand-red transition-colors resize-none"
+                      className="w-full px-4 py-3 bg-warm-cream border border-warm-amber/40 rounded-lg text-warm-brown placeholder:text-warm-brown/40 focus:outline-none focus:border-brand-red transition-colors resize-none"
                       placeholder="Cuéntanos sobre tu consulta..."
                     />
                   </div>
@@ -251,7 +251,7 @@ const Contact = () => {
       </section>
 
       {/* Alternative CTA */}
-      <section className="section-padding bg-gradient-to-r from-brand-red/10 to-transparent">
+      <section className="section-padding bg-warm-cream/50">
         <div className="section-container text-center">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -259,10 +259,10 @@ const Contact = () => {
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
           >
-            <h2 className="text-3xl font-bold text-white mb-4">
+            <h2 className="text-3xl font-bold text-warm-brown mb-4">
               Pedidos <span className="text-brand-red">Rápidos</span>
             </h2>
-            <p className="text-white/60 mb-8 max-w-2xl mx-auto">
+            <p className="text-warm-brown/60 mb-8 max-w-2xl mx-auto">
               Para hacer tu pedido de forma más rápida y directa, usa WhatsApp. Responderemos en minutos.
             </p>
             <a

@@ -13,7 +13,7 @@ const Home = () => {
   const [activeStep, setActiveStep] = useState(0);
 
   return (
-    <div className="bg-black">
+    <div className="bg-white">
       <SEO
         title="Carne Premium de Calidad Superior"
         description="Carne premium de cerdo y res en Bello, Antioquia. Más de 20 años de experiencia. De la granja a tu mesa con calidad garantizada."
@@ -35,12 +35,12 @@ const Home = () => {
         }}
       />
       {/* Hero Section */}
-      <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20">
+      <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20 bg-gradient-to-b from-warm-amber/30 to-warm-cream">
         {/* Background Image with Overlay */}
         <div className="absolute inset-0 z-0">
           <img
-            src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?w=1600&h=900&fit=crop"
-            alt="Carne premium"
+            src="https://images.unsplash.com/photo-1500595046891-e21e02c37ca3?w=1600&h=900&fit=crop"
+            alt="Granja antioqueña al amanecer"
             className="w-full h-full object-cover"
           />
           <div className="cinematic-overlay" />
@@ -63,18 +63,18 @@ const Home = () => {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
-            className="text-5xl md:text-7xl font-bold text-white mb-6"
+            className="text-5xl md:text-7xl font-bold text-white mb-6 drop-shadow-lg"
           >
-            Carne <span className="text-brand-red">Premium</span> de la Granja a tu Mesa
+            Del Campo Antioqueño <span className="text-warm-amber">a tu Mesa</span>
           </motion.h1>
 
           <motion.p
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
-            className="text-xl md:text-2xl text-white/80 mb-12 max-w-3xl mx-auto"
+            className="text-xl md:text-2xl text-white/90 mb-12 max-w-3xl mx-auto drop-shadow-md"
           >
-            Cerdo y res de calidad superior en Bello, Antioquia. Tradición, frescura y confianza para hogares, familias y restaurantes.
+            Carnes premium de origen real. Tradición antioqueña, producción moderna y calidad que se siente en cada corte.
           </motion.p>
 
           <motion.div
@@ -103,7 +103,7 @@ const Home = () => {
       </section>
 
       {/* Trust Bar */}
-      <section className="bg-black py-12 border-y border-brand-red/20">
+      <section className="bg-warm-cream py-12 border-y border-warm-amber/40">
         <div className="section-container">
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
             {[
@@ -120,12 +120,12 @@ const Home = () => {
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ delay: i * 0.1 }}
                   viewport={{ once: true }}
-                  className="flex items-center gap-4 p-4 rounded-lg bg-brand-red/5 border border-brand-red/10 hover:border-brand-red/40 transition-colors"
+                  className="flex items-center gap-4 p-4 rounded-lg bg-white border border-warm-amber/30 hover:border-brand-red/60 transition-colors warm-shadow"
                 >
                   <Icon className="text-brand-red" size={32} />
                   <div className="text-left">
                     <p className="text-brand-red font-bold text-lg">{stat.label}</p>
-                    <p className="text-white/60 text-sm">{stat.value}</p>
+                    <p className="text-warm-brown/70 text-sm">{stat.value}</p>
                   </div>
                 </motion.div>
               );
@@ -135,25 +135,25 @@ const Home = () => {
       </section>
 
       {/* Quienes Somos Preview */}
-      <section className="section-padding bg-black">
+      <section className="section-padding bg-gradient-to-r from-warm-cream to-white">
         <div className="section-container">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <motion.div initial={{ opacity: 0, x: -40 }} whileInView={{ opacity: 1, x: 0 }} transition={{ duration: 0.6 }} viewport={{ once: true }}>
               <img
-                src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600&h=400&fit=crop"
-                alt="Nuestra granja"
-                className="rounded-lg border border-brand-red/20 w-full h-96 object-cover"
+                src="https://images.unsplash.com/photo-1500595046891-e21e02c37ca3?w=600&h=400&fit=crop"
+                alt="Nuestra granja en Antioquia"
+                className="rounded-lg border-2 border-warm-amber/40 w-full h-96 object-cover warm-shadow"
               />
             </motion.div>
 
             <motion.div initial={{ opacity: 0, x: 40 }} whileInView={{ opacity: 1, x: 0 }} transition={{ duration: 0.6 }} viewport={{ once: true }}>
-              <h2 className="text-4xl font-bold text-white mb-4">
-                Quiénes <span className="text-brand-red">Somos</span>
+              <h2 className="text-4xl font-bold text-warm-brown mb-4">
+                Origen Real, <span className="text-brand-red">Calidad Auténtica</span>
               </h2>
-              <p className="text-white/80 mb-6 leading-relaxed">
+              <p className="text-warm-brown/80 mb-6 leading-relaxed">
                 Market Cerdo es una empresa productora y comercializadora de carne de cerdo, constituida por socios porcicultores con más de 20 años de experiencia. Nacemos de la pasión por ofrecer carne de excelencia.
               </p>
-              <p className="text-white/60 mb-8">
+              <p className="text-warm-brown/70 mb-8">
                 Con base en Bello, Antioquia, y próxima apertura en Envigado, somos el puente entre la granja responsable y tu mesa.
               </p>
               <Link to="/nosotros" className="brand-button-primary">
@@ -165,7 +165,7 @@ const Home = () => {
       </section>
 
       {/* De la Granja a tu Mesa - Central Section */}
-      <section className="section-padding bg-black relative">
+      <section className="section-padding bg-gradient-to-b from-white via-warm-cream to-warm-beige relative">
         <div className="section-container">
           <SectionTitle
             title="De la Granja a Tu Mesa"
@@ -184,17 +184,17 @@ const Home = () => {
                 viewport={{ once: true }}
                 className={`p-4 rounded-lg border-2 transition-all text-left ${
                   activeStep === index
-                    ? 'bg-brand-red border-brand-red'
-                    : 'bg-gray-900 border-brand-red/20 hover:border-brand-red/40'
+                    ? 'bg-brand-red border-brand-red text-white warm-shadow-md'
+                    : 'bg-white border-warm-amber/40 hover:border-brand-red/60 text-warm-brown warm-shadow'
                 }`}
               >
-                <p className={`text-sm font-bold mb-2 ${activeStep === index ? 'text-white' : 'text-brand-yellow'}`}>
+                <p className={`text-sm font-bold mb-2 ${activeStep === index ? 'text-white' : 'text-brand-red'}`}>
                   {step.id.toString().padStart(2, '0')}
                 </p>
-                <h4 className={`font-bold text-sm mb-1 ${activeStep === index ? 'text-white' : 'text-white'}`}>
+                <h4 className={`font-bold text-sm mb-1 ${activeStep === index ? 'text-white' : 'text-warm-brown'}`}>
                   {step.title}
                 </h4>
-                <p className={`text-xs ${activeStep === index ? 'text-white/90' : 'text-white/60'}`}>{step.description}</p>
+                <p className={`text-xs ${activeStep === index ? 'text-white/90' : 'text-warm-brown/70'}`}>{step.description}</p>
               </motion.button>
             ))}
           </div>
@@ -205,16 +205,16 @@ const Home = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.3 }}
-            className="mt-12 p-8 bg-gradient-to-r from-brand-red/10 to-transparent border border-brand-red/20 rounded-lg"
+            className="mt-12 p-8 bg-gradient-to-r from-warm-amber/30 to-transparent border border-warm-amber/50 rounded-lg warm-shadow-md"
           >
-            <h3 className="text-3xl font-bold text-white mb-3">{FARM_STEPS[activeStep].title}</h3>
-            <p className="text-white/70 text-lg">{FARM_STEPS[activeStep].description}</p>
+            <h3 className="text-3xl font-bold text-warm-brown mb-3">{FARM_STEPS[activeStep].title}</h3>
+            <p className="text-warm-brown/80 text-lg">{FARM_STEPS[activeStep].description}</p>
           </motion.div>
         </div>
       </section>
 
       {/* Values Section */}
-      <section className="section-padding bg-black">
+      <section className="section-padding bg-white">
         <div className="section-container">
           <SectionTitle title="Nuestros Valores" subtitle="Lo que nos define como marca" />
 
@@ -227,7 +227,7 @@ const Home = () => {
       </section>
 
       {/* Featured Products */}
-      <section className="section-padding bg-black">
+      <section className="section-padding bg-warm-cream">
         <div className="section-container">
           <SectionTitle title="Productos Destacados" subtitle="Descubre nuestros cortes premium" />
 
@@ -248,7 +248,7 @@ const Home = () => {
       </section>
 
       {/* Testimonials */}
-      <section className="section-padding bg-black">
+      <section className="section-padding bg-white">
         <div className="section-container">
           <SectionTitle title="Lo Que Dicen Nuestros Clientes" subtitle="Historias reales de satisfacción y confianza" />
 
@@ -261,9 +261,9 @@ const Home = () => {
       </section>
 
       {/* Final CTA */}
-      <section className="section-padding bg-gradient-to-b from-black to-black relative overflow-hidden">
-        <div className="absolute inset-0 opacity-20 pointer-events-none">
-          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-brand-red rounded-full blur-3xl" />
+      <section className="section-padding bg-gradient-to-b from-warm-brown to-warm-walnut relative overflow-hidden">
+        <div className="absolute inset-0 opacity-10 pointer-events-none">
+          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-warm-amber rounded-full blur-3xl" />
         </div>
 
         <div className="section-container relative z-10 text-center">
@@ -274,7 +274,7 @@ const Home = () => {
             viewport={{ once: true }}
             className="text-4xl md:text-5xl font-bold text-white mb-6"
           >
-            ¿Listo para llevar <span className="text-brand-red">calidad premium</span> a tu mesa?
+            ¿Listo para llevar <span className="text-warm-amber">calidad auténtica</span> a tu mesa?
           </motion.h2>
 
           <motion.p
@@ -282,9 +282,9 @@ const Home = () => {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.1 }}
             viewport={{ once: true }}
-            className="text-xl text-white/60 mb-8 max-w-2xl mx-auto"
+            className="text-xl text-white/80 mb-8 max-w-2xl mx-auto"
           >
-            Contacta con nosotros por WhatsApp y realizará tu pedido de forma fácil y rápida.
+            Contacta con nosotros por WhatsApp y realiza tu pedido de forma fácil y rápida.
           </motion.p>
 
           <motion.a

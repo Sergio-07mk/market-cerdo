@@ -17,12 +17,12 @@ const SectionTitle: React.FC<SectionTitleProps> = ({ title, subtitle, centered =
       viewport={{ once: true }}
       className={`mb-12 ${centered ? 'text-center' : ''}`}
     >
-      <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
+      <h2 className="text-4xl md:text-5xl font-bold text-warm-brown mb-4">
         <span className="text-brand-red">{title.split(' ')[0]}</span>{' '}
         {title.split(' ').slice(1).join(' ')}
       </h2>
       {subtitle && (
-        <p className="text-lg text-white/60 max-w-2xl mx-auto">{subtitle}</p>
+        <p className="text-lg text-warm-brown/70 max-w-2xl mx-auto">{subtitle}</p>
       )}
     </motion.div>
   );

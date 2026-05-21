@@ -6,7 +6,7 @@ const Footer = () => {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="bg-black border-t border-brand-red/20">
+    <footer className="bg-warm-brown border-t border-warm-amber/40">
       {/* Main Footer */}
       <div className="section-container section-padding">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
@@ -17,7 +17,7 @@ const Footer = () => {
               alt="Market Cerdo & Market Res"
               className="h-16 w-auto"
             />
-            <p className="text-white/60 text-sm leading-relaxed">
+            <p className="text-white/70 text-sm leading-relaxed">
               De la granja a tu mesa. Carne premium de excelencia en Antioquia.
             </p>
             <div className="flex gap-3 pt-4">
@@ -25,7 +25,7 @@ const Footer = () => {
                 href={BRAND_INFO.social.facebook}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-10 h-10 rounded-full bg-brand-red/10 flex items-center justify-center hover:bg-brand-red hover:text-white transition-all"
+                className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-brand-red hover:text-white transition-all text-white"
               >
                 <Facebook size={18} />
               </a>
@@ -33,7 +33,7 @@ const Footer = () => {
                 href={BRAND_INFO.social.instagram}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-10 h-10 rounded-full bg-brand-red/10 flex items-center justify-center hover:bg-brand-red hover:text-white transition-all"
+                className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-brand-red hover:text-white transition-all text-white"
               >
                 <Instagram size={18} />
               </a>
@@ -41,7 +41,7 @@ const Footer = () => {
                 href={BRAND_INFO.social.whatsapp}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-10 h-10 rounded-full bg-brand-red/10 flex items-center justify-center hover:bg-brand-red hover:text-white transition-all"
+                className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-brand-red hover:text-white transition-all text-white"
               >
                 <MessageCircle size={18} />
               </a>
@@ -53,27 +53,27 @@ const Footer = () => {
             <h4 className="text-white font-bold text-sm mb-6">Navegación</h4>
             <ul className="flex flex-col gap-3">
               <li>
-                <Link to="/" className="text-white/60 hover:text-brand-red text-sm transition-colors">
+                <Link to="/" className="text-white/70 hover:text-warm-amber text-sm transition-colors">
                   Inicio
                 </Link>
               </li>
               <li>
-                <Link to="/catalogo" className="text-white/60 hover:text-brand-red text-sm transition-colors">
+                <Link to="/catalogo" className="text-white/70 hover:text-warm-amber text-sm transition-colors">
                   Catálogo
                 </Link>
               </li>
               <li>
-                <Link to="/nosotros" className="text-white/60 hover:text-brand-red text-sm transition-colors">
+                <Link to="/nosotros" className="text-white/70 hover:text-warm-amber text-sm transition-colors">
                   Nosotros
                 </Link>
               </li>
               <li>
-                <Link to="/recetas" className="text-white/60 hover:text-brand-red text-sm transition-colors">
+                <Link to="/recetas" className="text-white/70 hover:text-warm-amber text-sm transition-colors">
                   Recetas
                 </Link>
               </li>
               <li>
-                <Link to="/promociones" className="text-white/60 hover:text-brand-red text-sm transition-colors">
+                <Link to="/promociones" className="text-white/70 hover:text-warm-amber text-sm transition-colors">
                   Promociones
                 </Link>
               </li>
@@ -117,7 +117,7 @@ const Footer = () => {
                 <Phone size={16} className="text-brand-red flex-shrink-0 mt-1" />
                 <a
                   href={`tel:${BRAND_INFO.phone}`}
-                  className="text-white/60 hover:text-brand-red text-sm transition-colors"
+                  className="text-white/70 hover:text-warm-amber text-sm transition-colors"
                 >
                   {BRAND_INFO.phone}
                 </a>
@@ -126,7 +126,7 @@ const Footer = () => {
                 <Mail size={16} className="text-brand-red flex-shrink-0 mt-1" />
                 <a
                   href={`mailto:${BRAND_INFO.email}`}
-                  className="text-white/60 hover:text-brand-red text-sm transition-colors"
+                  className="text-white/70 hover:text-warm-amber text-sm transition-colors"
                 >
                   {BRAND_INFO.email}
                 </a>
@@ -147,15 +147,15 @@ const Footer = () => {
         </div>
 
         {/* Divider */}
-        <div className="border-t border-brand-red/20 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
-          <p className="text-white/40 text-xs text-center md:text-left">
+        <div className="border-t border-white/20 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
+          <p className="text-white/60 text-xs text-center md:text-left">
             &copy; {currentYear} Market Cerdo & Market Res. Todos los derechos reservados.
           </p>
-          <div className="flex gap-6 text-xs text-white/40">
-            <Link to="/terminos-y-condiciones" className="hover:text-brand-red transition-colors">
+          <div className="flex gap-6 text-xs text-white/60">
+            <Link to="/terminos-y-condiciones" className="hover:text-warm-amber transition-colors">
               Términos y Condiciones
             </Link>
-            <a href="#" className="hover:text-brand-red transition-colors">
+            <a href="#" className="hover:text-warm-amber transition-colors">
               Privacidad
             </a>
           </div>

@@ -8,23 +8,23 @@
   }
 
   body {
-    @apply bg-black text-white font-futura;
+    @apply bg-white text-warm-brown font-futura;
   }
 
   h1 {
-    @apply text-display font-bold tracking-tight;
+    @apply text-display font-bold tracking-tight text-warm-brown;
   }
 
   h2 {
-    @apply text-headline font-bold tracking-tight;
+    @apply text-headline font-bold tracking-tight text-warm-brown;
   }
 
   h3 {
-    @apply text-subheadline font-bold;
+    @apply text-subheadline font-bold text-warm-brown;
   }
 
   p {
-    @apply text-body leading-relaxed;
+    @apply text-body leading-relaxed text-warm-brown;
   }
 }
 
@@ -38,7 +38,7 @@
   }
 
   .gradient-overlay {
-    @apply absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-black opacity-60;
+    @apply absolute inset-0 bg-gradient-to-b from-transparent via-warm-amber/20 to-warm-deepred/40 opacity-80;
   }
 
   .brand-button {
@@ -46,7 +46,7 @@
   }
 
   .brand-button-primary {
-    @apply brand-button bg-brand-red text-white hover:bg-red-700 hover:shadow-lg hover:shadow-red-500/50;
+    @apply brand-button bg-brand-red text-white hover:bg-warm-deepred hover:shadow-lg hover:shadow-brand-red/40;
   }
 
   .brand-button-secondary {
@@ -54,17 +54,25 @@
   }
 
   .brand-button-white {
-    @apply brand-button bg-white text-brand-red hover:bg-gray-100 font-bold;
+    @apply brand-button bg-white text-brand-red hover:bg-warm-cream font-bold;
   }
 
   .cinematic-overlay {
-    @apply absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent;
+    @apply absolute inset-0 bg-gradient-to-t from-warm-brown/60 via-warm-deepred/30 to-transparent;
   }
 
   .smoke-effect {
-    @apply absolute inset-0 opacity-20 pointer-events-none;
-    background: radial-gradient(ellipse at center, rgba(226, 35, 36, 0.1) 0%, transparent 70%);
+    @apply absolute inset-0 opacity-25 pointer-events-none;
+    background: radial-gradient(ellipse at center, rgba(232, 212, 162, 0.15) 0%, transparent 70%);
     animation: smoke 8s ease-in-out infinite;
+  }
+
+  .warm-shadow {
+    @apply shadow-lg shadow-warm-brown/10;
+  }
+
+  .warm-shadow-md {
+    @apply shadow-md shadow-warm-brown/15;
   }
 }
 

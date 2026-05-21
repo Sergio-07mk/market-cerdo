@@ -15,7 +15,7 @@ import NotFound from './pages/NotFound';
 function App() {
   return (
     <BrowserRouter>
-      <div className="bg-black text-white">
+      <div className="bg-white text-warm-brown">
         <Navbar />
         <Routes>
           <Route path="/" element={<Home />} />
